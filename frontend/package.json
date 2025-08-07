@@ -13,6 +13,7 @@
   "dependencies": {
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "vercel": "^44.7.3",
     "vitest": "^3.2.4"
   },
   "devDependencies": {
