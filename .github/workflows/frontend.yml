@@ -1,7 +1,7 @@
 name: Frontend - CI/CD
 
 on:
-  push:
+  commit:
     path:
       - 'frontend/**'
     branches: [main]
@@ -22,5 +22,5 @@ jobs:
       - name: Rodar testes
         run: npm run test
 
-      - name: Deploy na Vercel
-        run: npx vercel --prod --yes --token=${{ secrets.VERCEL_TOKEN }}  
+      - name: Push no repositório
+        run: git push origin main
