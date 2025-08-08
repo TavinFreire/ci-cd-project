@@ -1,13 +1,13 @@
 name: Frontend - CI/CD
 
 on:
-  commit_comment:
+  push:
     path:
       - 'frontend/**'
     branches: [main]
 
 jobs:
-  deploy:
+  verify:
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -21,6 +21,9 @@ jobs:
 
       - name: Rodar testes
         run: npm run test
+
+      - name: Building
+        run: npm run build
 
       - name: Push no repositório
         run: git push origin main
